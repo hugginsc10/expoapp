@@ -1,19 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {useState, UseEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Nav from './src/nav'
-import Generate from './src/generate'
-import List from './src/list'
+import Nav from './src/nav';
+import Generate from './src/generate';
+import List from './src/list';
 
 
 const apple = () => {
-  const [random, setRandom] = useState([1,2,3])
+  const [random, setRandom] = useState([1,2,3]);
+
+
+  useEffect(()=> {
+
+  }, [])
 
 
 
 
 const onAddRandom = () => {
-  alert('add peanut butter')
+  const randomVal = Math.floor(Math.random() * 100) +1;
+  const newState =[...random, randomVal]
+  setRandom(newState)
 }
 
 
@@ -33,7 +40,7 @@ const onAddRandom = () => {
       <View>
         <Text style={styles.text}>Native</Text>
       </View>
-        <List />
+        <List items={random} />
     </View>
   );
 }

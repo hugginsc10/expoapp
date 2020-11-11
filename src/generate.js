@@ -1,5 +1,6 @@
 import React from 'react'
-import { Text, View, StyleSheet, TouchableHighlight, TouchableOpacity} from 'react-native';
+import { Text, View, StyleSheet, 
+    TouchableHighlight, TouchableOpacity, Pressable} from 'react-native';
 
 
 
@@ -7,7 +8,7 @@ const Generate = ({add}) => {
     return (
     <>
     {/* <TouchableOpacity></TouchableOpacity> */}
-<TouchableHighlight
+<Pressable
 onPress = {()=> add()}
 underlayColor='orange'
 activeOpacity={0.2}
@@ -16,11 +17,11 @@ activeOpacity={0.2}
 >
             <View style={styles.generate}>
                 <Text>
-                    banana apple orange plum pineapple
+                  click to add banana apple orange plum pineapple
     </Text>
 
             </View>
-</TouchableHighlight>
+</Pressable>
  
 </>  
     )
@@ -29,7 +30,7 @@ activeOpacity={0.2}
 
 const styles = StyleSheet.create({
     generate: {
-        backgroundColor: 'black',
+        backgroundColor: 'white',
         alignItem: 'center',
         padding: 10,
         width: '100%',

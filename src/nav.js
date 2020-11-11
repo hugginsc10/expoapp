@@ -8,9 +8,8 @@ const Nav = ({appName}) => {
         <View style={styles.nav}>
             <Text>
                 {appName}
-                
-             </Text>
-            </View>
+            </Text>
+        </View>
     )
 }
 
